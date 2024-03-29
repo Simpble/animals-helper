@@ -1,0 +1,33 @@
+props:
+  upload-folder: D:/developmentSoftWare/project/animals-helper/imgs/
+  editor-folder: D:/developmentSoftWare/project/animals-helper/imgs/editor/
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 504292
+    url: jdbc:mysql://localhost:3306/animalshelper?useSSL=false&characterEncoding=utf-8
+  servlet:
+    multipart:
+      enabled: true # 开启文件上传选项
+      max-file-size: 100MB # 最大文件大小
+      max-request-size: 100MB # 最大请求大小
+  data:
+    redis:
+      host: 192.168.186.128
+      port: 6379
+  mail:
+    host: smtp.qq.com   # 腾讯服务器
+    username: 1748275908@qq.com    # 邮箱名称
+    password: jxegpcfxtwdnecej    # 开启POP3服务后生产的密码
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.ebable: true
+      mail.smtp.starttls.required: true
+
+#rocketmq:
+#  name-server: 192.168.186.128:9876
+#  producer:
+#    group: TestGroup
+server:
+  port: 5050
